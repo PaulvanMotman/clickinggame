@@ -176,7 +176,7 @@ function click (click, animation) {
         if (clicked.every(isFalse)) {
             writeNewScore(currentUser, score)
             alert("You did it! You're score is " + score)
-            window.location.href = "file:///Users/paulvanmotman/dev/Reactmania/anime/index.html"
+            window.location.href = "https://www.paulvanmotman.com/game/index.html"
         }
     }
 }
@@ -190,12 +190,12 @@ function generate_clickfunction(i, j) {
     };
 }
 
-for (var i = animations.length -1; i >= 0; i--) {
-    $(selectors[i]).click(generate_clickfunction(i,i))          
-}
-
 
 $('#start').submit(function(e) {
+
+    for (var i = animations.length -1; i >= 0; i--) {
+        $(selectors[i]).click(generate_clickfunction(i,i))          
+    }
 
     e.preventDefault()
 
@@ -218,7 +218,7 @@ $('#start').submit(function(e) {
         if (score == 0) {
             alert("Game over!")
             $("#container").hide()
-            window.location.href = "file:///Users/paulvanmotman/dev/Reactmania/anime/index.html"
+            window.location.href = "https://www.paulvanmotman.com/game/index.html"
         }
     }, 1000)
 

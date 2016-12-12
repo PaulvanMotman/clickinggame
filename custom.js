@@ -202,7 +202,6 @@ $('#start').submit(function(e) {
     $('#button').attr("disabled", 'disabled')
 
     currentUser = $('#username').val()
-    console.log(currentUser)
 
 
     for (var i = animations.length -1, j = 6400 ; i >= 0, j >= 400; i--, j -= 400) {
